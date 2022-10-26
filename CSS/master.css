@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(/imgs/bg-pattern-top-desktop.svg), url(/imgs/bg-pattern-bottom-desktop.svg) no-repeat;
+    background-position: right 67vw bottom 57vh, left 60vw top -21vh;
+}
+main{
+    max-width: 1020px;
+}
+.head-1{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.heading .title{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    font-size: 50px;
+    width: 330px;
+    margin-bottom: 2rem;
+}
+.heading .p-1{
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+    width: 385px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+.rate{
+    width: 600px;
+    align-content: flex-end;
+}
+.review ,
+.Guru,
+.BestTech{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    padding: 20px;
+    background-color: var(--Light-Grayish-Magenta);
+    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.review{
+    margin-left: 12%;
+}
+.Guru{
+    margin-left: 22%;
+}
+.BestTech{
+    margin-left: 33%;
+}
+.review .star{
+    margin-left: -35px;
+}
+#spec{
+    margin-left: -70px;
+}
+.rate .p-2{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.avatars{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+.avatar-1{
+    background-color: var(--Very-Dark-Magenta);
+    padding: 30px 20px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    height: fit-content;
+}
+.avatar-1 .name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.image img{
+    width: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-left: -105px;
+}
+.name-1{
+    margin-left: -255px;
+}
+.name-1 h3{
+    color: white;
+    margin-bottom: 5px;
+}
+.name-1 .p-3{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--Soft-Pink);
+}
+.avatar-1 .p-4{
+    color: var(--Light-Grayish-Magenta);
+    line-height: 1.5;
+}
+#two{
+    margin-top: 20px;
+}
+#three{
+    margin-top: 50px;
+}
+@media (max-width: 375px){
+    body{
+        overflow: visible;
+        background: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top 0vw left 0, right 0 bottom 85px;
+    }
+    main{
+        width: 350px;
+        margin-top: 50px;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .container .head-1{
+        flex-direction: column;
+    }
+    .container .head-1 .title{
+        text-align: center;
+        line-height: .7;
+        padding: 5px;
+        margin: auto;
+        font-size: 25px;
+        width: 225px;
+        margin-bottom: 1rem;
+    }
+    .container .head-1 .p-1{
+        text-align: center;
+        margin: auto;
+        width: 290px;
+        margin-bottom: 1rem ;
+    }
+    .container .head-1 .rate{
+        margin: auto;
+        text-align: center;
+        max-width: 100%;
+    }
+    .container .head-1 .rate .review,
+    .container .head-1 .rate .Guru,
+    .container .head-1 .rate .BestTech{
+        margin-left: 0;
+        max-width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #spec{
+        margin-left: 0;
+    }
+    .review .star {
+        margin-left: 0;
+    }
+    .container .head-1 .rate .star{
+        margin-bottom: 5px;
+    }
+    .container .avatars{
+        grid-template-columns: 1fr;
+    }
+    .container .avatars .avatar-1{
+        margin-bottom: 1rem;
+    }
+    #two{
+        margin-top: 0;
+    }
+    #three{
+        margin-top: 0;
+    }
+}
